@@ -1,0 +1,87 @@
+body{
+    background-color: #EFDAD7;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.major-title {
+    font-size: 3.5rem;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+
+/* INDEX.HTML */
+.section-header {
+    padding-bottom: 3%;
+}
+
+/* Introduction section */
+.top-container {
+    background-color: #9AD0EC;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.profile-pic {
+    height: auto;
+    width: 50%;
+}
+
+#self-name {
+    font-size: 3.5rem;
+}
+
+
+/* Portfolio section */
+#portfolio-container {
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+.card-img {
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+}
+
+
+/* Skills section */
+#skill-container {
+    background-color: #9AD0EC;
+    padding-top: 3%;
+}
+
+.skill {
+    padding-bottom: 3%;
+}
+
+.icon {
+    height: auto;
+    width: 75%;
+}
+
+
+/* Footer Section */
+.socmed-icon {
+    height: 24px;
+    width: 24px;
+}
+
+/* CONTACT_ME.HTML */
+.contact-form {
+    margin: 2% 20%;
+}
+
+.flash-message {
+    color: red;
+}

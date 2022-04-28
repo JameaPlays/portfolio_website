@@ -1,0 +1,41 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Yi Jin Programming - Programmer, Accountant, Lifelong Learner{% endblock %}
+
+{% block styles %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css">
+{% endblock %}
+
+{% block navbar %}
+{% include "header.html" %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid top-container">
+    <div class="row align-items-center">
+        <h1 class="text-center major-title">☎️ Contact Me  📞</h1>
+        <p class="text-center">
+            If you like what you see and would like to get in touch with me, feel free to fill in the form below, and I
+            will get back to you ASAP.
+        </p>
+    </div>
+</div>
+
+<div class="contact-form">
+    <h4 class="mb-3"><u>Contact Form</u></h4>
+    {% for message in get_flashed_messages(): %}
+        <p class="flash-message">{{ message }}</p>
+    {% endfor %}
+    {{ wtf.quick_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+</div>
+
+{% with year=year %}
+    {% include "footer.html" %}
+{% endwith %}
+{% endblock %}
